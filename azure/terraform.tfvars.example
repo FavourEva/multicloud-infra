@@ -1,0 +1,36 @@
+# Azure Configuration
+azure_region = "East US"
+
+# Project Configuration
+environment   = "dev"
+project_name  = "multi-cloud-terraform"
+owner         = "DevOps Team"
+cost_center   = "Engineering"
+
+# Network Configuration
+vnet_cidr              = "10.1.0.0/16"
+public_subnet_cidr     = "10.1.1.0/24"
+private_subnet_cidr    = "10.1.10.0/24"
+database_subnet_cidr   = "10.1.100.0/24"
+
+# Compute Configuration
+web_vm_size     = "Standard_B1s"
+app_vm_size     = "Standard_B2s"
+web_vm_count    = 2
+app_vm_count    = 2
+admin_username  = "azureuser"
+admin_password  = "P@ssw0rd123!"
+
+# Database Configuration
+db_sku_name                        = "S0" #"GP_Gen5_2"
+db_storage_mb                      = 20480
+db_name                           = "appdb"
+db_username                       = "dbadmin"
+db_backup_retention_days          = 7
+db_geo_redundant_backup_enabled   = false
+
+
+client_id = "<your-client-id>"
+client_secret = "<PLACEHOLDER>"
+subscription_id = "<subscription_id>"
+tenant_id       = "<tenant_id>"
