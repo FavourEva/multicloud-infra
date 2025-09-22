@@ -1,7 +1,7 @@
-Multi-Cloud Terraform Infrastructure
+# Multi-Cloud Terraform Infrastructure
 A production-ready multi-cloud Terraform infrastructure repository supporting AWS, Azure, and GCP with a standardized 3-tier architecture using modular design patterns.
 
-Architecture Overview
+## Architecture Overview
 This repository implements a consistent 3-tier architecture across all three major cloud providers using reusable Terraform modules:
 
 Tier 1: Network layer (VPC/VNet, subnets, security groups)
