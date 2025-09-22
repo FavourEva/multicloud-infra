@@ -6,7 +6,7 @@ The design emphasizes **modularity, reusability, and secure state management**, 
 
 ---
 
-## 📂 Repository Structure
+## Repository Structure
 
 ├── .gitignore
 ├── Architecture/ # Architectural diagrams and design references
@@ -32,7 +32,7 @@ Each cloud provider directory follows the same structure:
 
 ---
 
-## 🧩 Modules Overview
+## Modules Overview
 
 Each module encapsulates a distinct layer of the architecture:
 
@@ -52,7 +52,7 @@ Detailed inputs, outputs, and examples for each module are available in [`docs/M
 
 ---
 
-## ⚙️ Prerequisites
+## Prerequisites
 
 1. **Terraform** v1.5+ (or the version specified in `required_version`).
 2. Cloud CLIs installed and authenticated:
@@ -64,7 +64,7 @@ Detailed inputs, outputs, and examples for each module are available in [`docs/M
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
 ### 1. Select Cloud Provider
 Navigate into the directory of the provider you want to deploy (`aws/`, `azure/`, or `gcp/`).
