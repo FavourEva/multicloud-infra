@@ -18,6 +18,7 @@ The design emphasizes **modularity, reusability, and secure state management**, 
 ├── azure/               # Azure-specific Terraform configuration
 └── gcp/                 # GCP-specific Terraform configuration
 
+```
 
 Each cloud provider directory follows the same structure:
 
