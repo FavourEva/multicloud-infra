@@ -7,9 +7,54 @@ This repository implements a consistent 3-tier architecture across all three maj
 Tier 1: Network layer (VPC/VNet, subnets, security groups)
 Tier 2: Compute layer (EC2/VM/Compute Engine instances)
 Tier 3: Database layer (RDS/Azure SQL/Cloud SQL)
-Repository Structure
-``` 
-multi-cloud-terraform/ ├── README.md ├── Architecture ├── .gitignore ├── aws/ # AWS infrastructure │ ├── main.tf # Main configuration using modules │ ├── providers.tf # AWS provider configuration │ ├── backend.tf # Remote state configuration │ ├── variables.tf # Input variables │ ├── outputs.tf # Output values │ ├── terraform.tfvars.example │ └── modules/ # AWS-specific modules │ ├── network/ # VPC, subnets, routing │ ├── security/ # Security groups, NACLs │ ├── compute/ # EC2 instances, launch templates │ └── database/ # RDS instances and configurations ├── azure/ # Azure infrastructure │ ├── main.tf # Main configuration using modules │ ├── providers.tf # Azure provider configuration │ ├── backend.tf # Remote state configuration │ ├── variables.tf # Input variables │ ├── outputs.tf # Output values │ ├── terraform.tfvars.example │ └── modules/ # Azure-specific modules │ ├── network/ # VNet, subnets, routing │ ├── security/ # NSGs, security rules │ ├── compute/ # Virtual machines, scale sets │ └── database/ # Azure SQL instances ├── gcp/ # GCP infrastructure │ ├── main.tf # Main configuration using modules │ ├── providers.tf # GCP provider configuration │ ├── backend.tf # Remote state configuration │ ├── variables.tf # Input variables │ ├── outputs.tf # Output values │ ├── terraform.tfvars.example │ └── modules/ # GCP-specific modules │ ├── network/ # VPC, subnets, Cloud Router/NAT │ ├── security/ # Firewall rules │ ├── compute/ # Compute Engine instances │ └── database/ # Cloud SQL instances | └── docs/ # Documentation ├── BACKEND_SETUP.md # Backend configuration guide └── MODULES.md # Module documentation
+
+##  Repository Structure
+
+```bash
+multi-cloud-terraform/
+├── README.md
+├── Architecture/         
+├── .gitignore
+├── aws/                  # AWS infrastructure
+│   ├── main.tf           # Main configuration using modules
+│   ├── providers.tf      # AWS provider configuration
+│   ├── backend.tf        # Remote state configuration
+│   ├── variables.tf      # Input variables
+│   ├── outputs.tf        # Output values
+│   ├── terraform.tfvars.example
+│   └── modules/          # AWS-specific modules
+│       ├── network/      # VPC, subnets, routing
+│       ├── security/     # Security groups, NACLs
+│       ├── compute/      # EC2 instances, launch templates
+│       └── database/     # RDS instances and configurations
+├── azure/                # Azure infrastructure
+│   ├── main.tf           # Main configuration using modules
+│   ├── providers.tf      # Azure provider configuration
+│   ├── backend.tf        # Remote state configuration
+│   ├── variables.tf      # Input variables
+│   ├── outputs.tf        # Output values
+│   ├── terraform.tfvars.example
+│   └── modules/          # Azure-specific modules
+│       ├── network/      # VNet, subnets, routing
+│       ├── security/     # NSGs, security rules
+│       ├── compute/      # Virtual machines, scale sets
+│       └── database/     # Azure SQL instances
+├── gcp/                  # GCP infrastructure
+│   ├── main.tf           # Main configuration using modules
+│   ├── providers.tf      # GCP provider configuration
+│   ├── backend.tf        # Remote state configuration
+│   ├── variables.tf      # Input variables
+│   ├── outputs.tf        # Output values
+│   ├── terraform.tfvars.example
+│   └── modules/          # GCP-specific modules
+│       ├── network/      # VPC, subnets, Cloud Router/NAT
+│       ├── security/     # Firewall rules
+│       ├── compute/      # Compute Engine instances
+│       └── database/     # Cloud SQL instances
+└── docs/                 # Documentation
+    ├── BACKEND_SETUP.md  # Backend configuration guide
+    └── MODULES.md        # Module documentation
+
 ```
 
 Modular Architecture Benefits
