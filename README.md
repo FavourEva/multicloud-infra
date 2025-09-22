@@ -151,8 +151,6 @@ AzureRM Provider
 Google Provider
 
 Notes
-This repository is designed for educational and project collaboration purposes. It demonstrates the use of Terraform modules, remote state management, and cross-cloud deployment patterns.
-
 Users are encouraged to:
 
 Work in isolated workspaces per environment.
