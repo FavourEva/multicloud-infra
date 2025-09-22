@@ -8,15 +8,15 @@ The design emphasizes **modularity, reusability, and secure state management**, 
 
 ## Repository Structure
 
+```bash
 ├── .gitignore
-├── Architecture/ # Architectural diagrams and design references
-└── docs/ # Supporting documentation
-├── BACKEND_SETUP.md # Instructions for backend configuration
-└── MODULES.md # Documentation for individual modules
-
-aws/ # AWS-specific Terraform configuration
-azure/ # Azure-specific Terraform configuration
-gcp/ # GCP-specific Terraform configuration
+├── Architecture/        # Architectural diagrams and design references
+├── docs/                # Supporting documentation
+│   ├── BACKEND_SETUP.md # Instructions for backend configuration
+│   └── MODULES.md       # Documentation for individual modules
+├── aws/                 # AWS-specific Terraform configuration
+├── azure/               # Azure-specific Terraform configuration
+└── gcp/                 # GCP-specific Terraform configuration
 
 
 Each cloud provider directory follows the same structure:
