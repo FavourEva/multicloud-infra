@@ -74,44 +74,31 @@ cd aws   # or azure / gcp
 2. Configure Variables
 Copy the example variable file and update it with your environment-specific values:
 
-bash
-Copy code
 cp terraform.tfvars.example terraform.tfvars
 Edit terraform.tfvars to define parameters such as region, VPC CIDR, instance sizes, and database settings.
 
 3. Initialize Terraform
 Initialize the working directory and configure the backend:
 
-bash
-Copy code
 terraform init
 4. Manage Workspaces (Optional)
 Create or select a workspace (e.g., dev, stage, prod):
 
-bash
-Copy code
 terraform workspace new dev || terraform workspace select dev
 5. Review Planned Changes
 Generate and review the execution plan:
 
-bash
-Copy code
 terraform plan -var-file="terraform.tfvars" -out=plan.out
 6. Apply the Configuration
 Apply the configuration to provision resources:
 
-bash
-Copy code
+
 terraform apply "plan.out"
 7. Destroy Resources
 When resources are no longer required, ensure they are properly destroyed:
 
-bash
-Copy code
 terraform destroy -var-file="terraform.tfvars"
-📑 Example terraform.tfvars
-hcl
-Copy code
+Example terraform.tfvars
 environment        = "dev"
 region             = "us-east-1"
 vpc_cidr           = "10.0.0.0/16"
@@ -163,7 +150,7 @@ AzureRM Provider
 
 Google Provider
 
-📝 Notes
+Notes
 This repository is designed for educational and project collaboration purposes. It demonstrates the use of Terraform modules, remote state management, and cross-cloud deployment patterns.
 
 Users are encouraged to:
