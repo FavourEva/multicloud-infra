@@ -18,8 +18,6 @@ aws/ # AWS-specific Terraform configuration
 azure/ # Azure-specific Terraform configuration
 gcp/ # GCP-specific Terraform configuration
 
-yaml
-Copy code
 
 Each cloud provider directory follows the same structure:
 
