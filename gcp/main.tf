@@ -91,3 +91,12 @@ module "compute" {
   app_instance_count  = var.app_instance_count
   database_private_ip = module.database.database_private_ip_address
 }
+
+module "container" {
+  source = "./modules/container"
+
+  gcp_region          = var.gcp_region
+  private_subnet_name   = module.network.private_subnet_name
+  network_name = module.network.network_name
+
+}

@@ -1,19 +1,13 @@
-
-
-
-#################################
-# 3. GKE Cluster + Node Pool
-#################################
 resource "google_container_cluster" "gke" {
   name     = "shopedge-cluster"
-  location = var.region
+  location = var.gcp_region
   deletion_protection = false  # ✅ Allow deletion
 
   remove_default_node_pool = true
   initial_node_count       = 1
 
-  network    = google_compute_network.vpc.name
-  subnetwork = google_compute_subnetwork.private_subnet.name
+  network    = var.network_name
+  subnetwork = var.private_subnet_name
 
   ip_allocation_policy {}
 
@@ -33,7 +27,7 @@ resource "google_container_cluster" "gke" {
 # Managed Node Pool
 resource "google_container_node_pool" "primary_nodes" {
   name       = "default-node-pool"
-  location   = var.region
+  location   = var.gcp_region
   cluster    = google_container_cluster.gke.name
 
   node_count = 2
@@ -61,23 +55,8 @@ resource "google_container_node_pool" "primary_nodes" {
 # Artifact Registry (Docker Repo)
 
 resource "google_artifact_registry_repository" "app_repo" {
-  location      = var.region
+  location      = var.gcp_region
   repository_id = "shop-edge"
   description   = "Docker images for ShopEdge app"
   format        = "DOCKER"
-}
-
-
-#  Outputs
-
-output "cluster_name" {
-  value = google_container_cluster.gke.name
-}
-
-output "cluster_endpoint" {
-  value = google_container_cluster.gke.endpoint
-}
-
-output "artifact_registry_repo" {
-  value = google_artifact_registry_repository.app_repo.id
 }
