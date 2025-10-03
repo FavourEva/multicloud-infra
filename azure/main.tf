@@ -105,3 +105,11 @@ module "compute" {
   admin_password     = var.admin_password
   database_fqdn      = module.database.database_fqdn
 }
+
+module "container" {
+  source = "./modules/container"
+
+  location             = local.location
+  resource_group_name  = local.resource_group_name
+  private_subnet_id  = module.network.private_subnet_id
+}

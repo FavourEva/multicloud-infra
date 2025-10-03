@@ -18,6 +18,11 @@ output "private_subnet_id" {
   value       = google_compute_subnetwork.private.id
 }
 
+output "private_subnet_name" {
+  description = "ID of the private subnet"
+  value       = google_compute_subnetwork.private.name
+}
+
 output "database_subnet_id" {
   description = "ID of the database subnet"
   value       = google_compute_subnetwork.database.id
